@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NASA APOD</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="nasaApodFragmentTitle">Picture of the day</string>
+    <string name="listEmpty">EmptyList</string>
+    <string name="menuRefresh">refreshList</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/nasaApodActivityNavigation">
+
+    <fragment
+        android:id="@+id/nasaApodActivityNavigation"
+        android:name="com.nasaapod.ui.nasaapod.NasaApodFragment"
+        android:label="@string/nasaApodFragmentTitle"
+        tools:layout="@layout/nasa_apod_fragment">
+        <action
+            android:id="@+id/action_ApodActivityToDetailFragment"
+            app:destination="@id/nav_detail"
+            app:popUpTo="@id/nasaApodActivityNavigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.nasaapod.ui.detail.DetailFragment"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="detailEntity"
+            app:argType="com.nasaapod.data.model.ApodResponse" />
+    </fragment>
+</navigation>

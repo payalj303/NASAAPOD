@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/adopFullImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/adopFullImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/black"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:padding="@dimen/_16dp"
+            android:textColor="@android:color/black"
+            app:drawableStartCompat="@drawable/ic_title"
+            app:layout_constraintBottom_toTopOf="@+id/copyrightTextView"
+            app:layout_constraintTop_toBottomOf="@+id/adopFullImageView" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/copyrightTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/copyrightTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_16dp"
+            android:drawableTint="@color/black"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_16dp"
+            android:textColor="@android:color/black"
+            app:drawableStartCompat="@drawable/ic_copyright"
+            app:layout_constraintBottom_toTopOf="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/copyrightTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_16dp"
+            android:drawableTint="@color/black"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_16dp"
+            android:textColor="@android:color/black"
+            app:drawableStartCompat="@drawable/ic_date"
+            app:layout_constraintBottom_toTopOf="@+id/explanationTextView"
+            app:layout_constraintTop_toBottomOf="@+id/copyrightTextView" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/explanationTextView"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/explanationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_16dp"
+            android:drawableTint="@color/black"
+            android:padding="@dimen/_16dp"
+            android:textColor="@android:color/black"
+            app:drawableStartCompat="@drawable/ic_explanation"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
